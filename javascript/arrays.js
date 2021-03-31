@@ -1,28 +1,6 @@
-
-// remove duplicate
-
-const removeDuplicates = function(nums) {
-    sortednums = nums.sort();
-    
-    for (var i; i <= nums.length; i++) {
-        if(sortednums[i] === sortednums[i+1]){
-            sortednums.splice(i+1, 1) 
-            /*splice(start, deleteCount) 
-            splice(s, d) deletes starting at s, d items
-            delete sortednums[i+1]; 
-            deletes next elemtent and leaves a undefined element
-            pop removes the last element */
-        }
-    }
-    
-};
-
-
+// sort an array 
 function sortList(){
-
-    
     const arr = [1, 2, 14, 12, 3, 7];
-
     const sortTrue =  (a,b) => {
         return a - b;
     };
@@ -32,6 +10,60 @@ function sortList(){
 }
 
 
+
+// remove duplicate
+
+async function removeDuplicates() {
+    let nums = [];
+    const readNums = require("readline-sync");
+    const n = readNums.question("What is the length of the array? \n"); 
+
+    var r1 = readline.createInterface({
+    input : process.stdin,
+    output : process.stdout 
+    });
+
+    r1.on('line', function(line) {
+    // Put the number in an array
+    nums.push(parseInt(line));
+   // Stop when the array is 5 numbers long
+   if (nums.length == n) {
+       r1.close();
+       console.log("array: ", nums, "size: " + n)
+   }
+
+})};
+
+
+
+function findBusiest(data) {
+    var data = [ [1487799425, 14, 1], 
+                 [1487799425, 4,  0], 
+                 [1487799425, 2,  0], 
+                 [1487800378, 10, 1],
+                 [1487801478, 18, 0],
+                 [1487801478, 18, 1],
+                 [1487901013, 1,  0],
+                 [1487901211, 7,  1],
+                 [1487901211, 7,  0] ]
+  // your code goes here
+   var flux = 0; // 14-4-2, 10-18+18,
+  for(var j = 0; j < data.length; j++){
+    
+    if(data[j][1] == data[j-1][1]){
+        if(data[j][2] == 1 )
+           flux = flux + data[j][2];
+        else
+          flux = flux - data[j][2] ;
+    console.log(flux) 
+    }        
+   else 
+    console.log(flux)
+     
+     
+  }
+ 
+}
 
 
 function fetchSpiral() {
@@ -77,5 +109,7 @@ function fetchSpiral() {
 
   
 module.exports = {
-    sortList
+    sortList,
+    removeDuplicates,
+    findBusiest
 }
