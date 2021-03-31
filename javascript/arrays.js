@@ -47,15 +47,17 @@ function findBusiest(data) {
                  [1487901211, 7,  1],
                  [1487901211, 7,  0] ]
   // your code goes here
-   var flux = 0; // 14-4-2, 10-18+18,
-  for(var j = 0; j < data.length; j++){
+   var flux = 0; // 14-4-2= 8, 10-18+18=10,-1, 7-7=0
+   var flux_arr = [];
+   for(var j = 0; j < data.length-1; j++){
     
-    if(data[j][1] == data[j-1][1]){
+    if(data[j+1][0] == data[j][0]){
         if(data[j][2] == 1 )
-           flux = flux + data[j][2];
+           flux = flux + data[j][1];
         else
-          flux = flux - data[j][2] ;
-    console.log(flux) 
+          flux = flux - data[j][1];
+    var fluxes = flux_arr.push(flux);
+    console.log("visitors " + flux, "total " + fluxes) 
     }        
    else 
     console.log(flux)

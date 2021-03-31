@@ -25,12 +25,19 @@ node --eval "require('./javascript/arrays.js').sortList()"
 
 3. The mall management is trying to figure out what was the busiest moment in the mall in the last year. Each data entry includes a timestamp (seconds in Unix Epoch format), an amount of people and whether they entered or exited. [ref](https://www.pramp.com/challenge/2WBx3Axln1t7JQ2jQq96)
 
-┌───────┬─────────────┬───────┐
-│ (exit)  │      time        visitors │
+
+ (exit) ────── time ────── visitors 
+
 ├───────┼─────────────┼───────┤
+
 │    0    │  1487799425     |   9     │
+
 │    1    │  1487799425     │   1     │
+
 │    0    │  1487801478     │   2     │
+
 │    1    │  1487901013     │   1     │
+
 │    1    │  1487901211     │   7     │
+
 └─────────┴───────────┴───────┘
