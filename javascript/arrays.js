@@ -1,7 +1,7 @@
 
 // remove duplicate
 
-var removeDuplicates = function(nums) {
+const removeDuplicates = function(nums) {
     sortednums = nums.sort();
     
     for (var i; i <= nums.length; i++) {
@@ -18,21 +18,33 @@ var removeDuplicates = function(nums) {
 };
 
 
+function sortList(){
+
+    
+    const arr = [1, 2, 14, 12, 3, 7];
+
+    const sortTrue =  (a,b) => {
+        return a - b;
+    };
+
+    const sortarr = arr.sort(sortTrue);
+    console.log(sortarr);
+}
 
 
-function Spiral(n) {
+
+
+function fetchSpiral() {
     // x^2 +y^2 =r^2 each point has a pair on a circle
-
-
     // 1, 2, 3, ... distance increase 1,1, 2, 2, 3, 3, 4, 4, ...
-    //[0], [1,2], [3,4,5,6], [7,8,9,10,11,12],[13,14,15,16,17,18,19,20]
+    // [0], [1,2], [3,4,5,6], [7,8,9,10,11,12],[13,14,15,16,17,18,19,20]
     // 1-> (1,0) 2-> (1,1) 3-> (0,3), 5-> (5,0) 6-> (-1,-1)
     
     for(var x = n ; x > 0 ; x++){
        
         var distance = x + 1; 
         for(var y = n ; y < n; y++ ){
-          
+          console.log(n)
         }
     }
 
@@ -62,18 +74,8 @@ function Spiral(n) {
 
 */
 
-var x = 0, y= 0;
 
-total = x+y;
   
-while(total< n){
-  y= y+1;
-  if(total< n){
-      x= x+1;
-  }
-  else return x, y;
-  total= x+y;
-
+module.exports = {
+    sortList
 }
-
-  
