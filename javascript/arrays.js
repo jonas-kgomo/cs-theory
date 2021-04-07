@@ -10,7 +10,6 @@ function sortList(){
 }
 
 
-
 // remove duplicate
 
 async function removeDuplicates() {
@@ -34,7 +33,7 @@ async function removeDuplicates() {
 
 })};
 
-
+// 
 
 function findBusiest(data) {
     var data = [ [1487799425, 14, 1], 
@@ -68,6 +67,19 @@ function findBusiest(data) {
 }
 
 
+// find a number in an array
+
+
+function findNumber(arr, k) {
+    if( arr.includes(k) ){
+        return 'YES'
+    }    
+    else  
+        return 'NO'  
+ // }
+}
+
+
 function fetchSpiral() {
     // x^2 +y^2 =r^2 each point has a pair on a circle
     // 1, 2, 3, ... distance increase 1,1, 2, 2, 3, 3, 4, 4, ...
@@ -87,26 +99,7 @@ function fetchSpiral() {
 }
 
 
-// (x,y) : x -> 1-2+3-4+5-6  y -> 1-2+3-4
-// n = 10: 10= 1+1+(1+1)+(1+1)+(1+1+1)+1= 1+1+2+2+3=9 : 9+1=10
-
-// :  sum n*(-1)^n from 0 to n
-
-
-/* move y with 1 unit (up or down) 
-   check if y= y+1< n , if true (y go to next step) else return y
-   move x  with 1 unit (left or right ), 
-   check if x_new= x+1< n , if true (go to next )
-   if total= x+y< n continue loop
-   n - 1
-   (0,0)-> y= 0 + 1  < n false , return y = 1  -> (0,1)
-   n - 3
-   (0,0) -> y= 0+1< 3  true, 
-   total = x + y = 2 <3 
-   x= 0+1< 3  true,
-   y= 2+1<3  false , return y = 2 (second iteration)
-
-*/
+ 
 
 
   
@@ -115,3 +108,34 @@ module.exports = {
     removeDuplicates,
     findBusiest
 }
+
+/*concat()	Joins two or more arrays, and returns a copy of the joined arrays
+copyWithin()	Copies array elements within the array, to and from specified positions
+entries()	Returns a key/value pair Array Iteration Object
+every()	Checks if every element in an array pass a test
+fill()	Fill the elements in an array with a static value
+filter()	Creates a new array with every element in an array that pass a test
+find()	Returns the value of the first element in an array that pass a test
+findIndex()	Returns the index of the first element in an array that pass a test
+forEach()	Calls a function for each array element
+from()	Creates an array from an object
+includes()	Check if an array contains the specified element
+indexOf()	Search the array for an element and returns its position
+isArray()	Checks whether an object is an array
+join()	Joins all elements of an array into a string
+keys()	Returns a Array Iteration Object, containing the keys of the original array
+lastIndexOf()	Search the array for an element, starting at the end, and returns its position
+map()	Creates a new array with the result of calling a function for each array element
+pop()	Removes the last element of an array, and returns that element
+push()	Adds new elements to the end of an array, and returns the new length
+reduce()	Reduce the values of an array to a single value (going left-to-right)
+reduceRight()	Reduce the values of an array to a single value (going right-to-left)
+reverse()	Reverses the order of the elements in an array
+shift()	Removes the first element of an array, and returns that element
+slice()	Selects a part of an array, and returns the new array
+some()	Checks if any of the elements in an array pass a test
+sort()	Sorts the elements of an array
+splice()	Adds/Removes elements from an array
+toString()	Converts an array to a string, and returns the result
+unshift()	Adds new elements to the beginning of an array, and returns the new length
+valueOf()	Returns the primitive value of an array
