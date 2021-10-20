@@ -1,6 +1,16 @@
 # Computer Science Theory
 ## Algorithms and Data Structure 
 
+## Topological Sorts
+
+In computer science, a topological sort or topological ordering of a directed graph is a linear ordering of its vertices such that for every directed edge $uv$  from vertex u to vertex $v, u$ comes before v in the ordering.
+
+Possible orderings, top down, down right, smallest to large, number of edges, arbitrary 
+$5,7,3,11,8,2,9,10 \newline 5,11,2,7,8,9,3,10 \newline 
+2,3,5,7,8,9,10,11 \newline
+5,2,9,7,3,10,11,8 \newline$
+
+
 Contains Leetcode and Hacker Rank questions and answers. 
 
 To test locally, make sure you have Node.js installed 
