@@ -8,9 +8,10 @@ In computer science, a topological sort or topological ordering of a directed gr
 Possible orderings, top down, down right, smallest to large, number of edges, arbitrary 
 
 ```
-$5,7,3,11,8,2,9,10 \newline 5,11,2,7,8,9,3,10 \newline 
-2,3,5,7,8,9,10,11 \newline
-5,2,9,7,3,10,11,8 \newline$
+$5,7,3,11,8,2,9,10  
+5,11,2,7,8,9,3,10  
+2,3,5,7,8,9,10,11 
+5,2,9,7,3,10,11,8 $
 ```
 
 Contains Leetcode and Hacker Rank questions and answers. 
